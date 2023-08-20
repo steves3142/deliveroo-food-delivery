@@ -8,7 +8,9 @@ import {
   AdjustmentsIcon,
 } from "react-native-heroicons/outline";
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Categories from '../components/categories';
+import Categories from '../components/Categories'
+import FeaturedRow from '../components/FeaturedRow'
+
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -64,9 +66,28 @@ export default function HomeScreen() {
         }}
         >
           {/* Categories */}
-          <Categories/>
+          <Categories />
 
-          {/* Featured Rows */}
+          {/* Featured */}
+          <FeaturedRow
+              id="123"
+              title="Featured"
+              description="Paid placements from our partners"
+          />
+
+          {/* Tasty Discounts */}
+          <FeaturedRow
+              id="1234"
+              title="Tasty Discounts"
+              description="Everyone's been enjoying these juicy discounts!"
+          />
+
+          {/* Offers near you */}
+          <FeaturedRow
+              id="12345"
+              title="Offers near you!"
+              description="Why not support your local restaurant tonight!"
+          />
 
         </ScrollView>
     </SafeAreaView>
